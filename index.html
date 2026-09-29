@@ -59,8 +59,8 @@
 
       .profile {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 280px;
-        gap: clamp(40px, 9vw, 112px);
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: clamp(32px, 7vw, 80px);
         align-items: center;
         padding: clamp(32px, 7vw, 76px);
         background: var(--paper);
@@ -137,7 +137,7 @@
         position: relative;
         justify-self: end;
         width: 100%;
-        max-width: 280px;
+        max-width: 220px;
       }
 
       .portrait-wrap::after {
@@ -154,10 +154,8 @@
         z-index: 1;
         display: block;
         width: 100%;
-        aspect-ratio: 4 / 5;
+        height: auto;
         border-radius: 12px;
-        object-fit: cover;
-        object-position: center 38%;
         background: #f0f1ee;
       }
 
@@ -174,7 +172,7 @@
         .topbar { width: min(100% - 36px, 1000px); padding: 21px 0; }
         main { width: min(100% - 36px, 1000px); padding: 30px 0 48px; }
         .profile { grid-template-columns: 1fr; gap: 38px; padding: 34px 28px 42px; }
-        .portrait-wrap { grid-row: 1; justify-self: start; width: 176px; }
+        .portrait-wrap { grid-row: 1; justify-self: start; width: 144px; }
         .portrait-wrap::after { inset: 9px -9px -9px 9px; }
         .eyebrow { margin-bottom: 16px; }
         .role { margin-top: 12px; font-size: 15px; }
