@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f7f7f5">
-    <meta name="description" content="赵庆，云南大学硕士研究生。">
+    <meta name="description" content="赵庆，云南大学人工智能专业硕士研究生。记录计算机视觉与大模型学习计划。">
     <title>赵庆 · 个人主页</title>
     <style>
       :root {
@@ -53,8 +53,8 @@
 
       main {
         width: min(100% - 48px, 1000px);
-        margin: auto;
-        padding: 52px 0 72px;
+        margin: 0 auto;
+        padding: 36px 0 72px;
       }
 
       .profile {
@@ -159,6 +159,87 @@
         background: #f0f1ee;
       }
 
+      .learning {
+        margin-top: 24px;
+        padding: clamp(32px, 6vw, 64px);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 18px 50px rgb(27 37 28 / 4%);
+      }
+
+      .learning h2 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 36px);
+        font-weight: 650;
+        letter-spacing: .02em;
+      }
+
+      .learning-note {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .learning-group {
+        margin-top: 34px;
+      }
+
+      .learning-group + .learning-group {
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      .learning-group h3 {
+        margin: 0 0 12px;
+        font-size: 17px;
+        font-weight: 650;
+      }
+
+      .checklist {
+        margin: 0;
+        padding-left: 1.7em;
+      }
+
+      .checklist li {
+        padding: 11px 0;
+        line-height: 1.7;
+      }
+
+      .checklist li + li {
+        border-top: 1px solid var(--line);
+      }
+
+      .checklist li::marker {
+        color: #87998a;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .checklist label {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--ink);
+        cursor: default;
+      }
+
+      .checklist input {
+        flex: none;
+        width: 16px;
+        height: 16px;
+        margin: 5px 0 0;
+        accent-color: var(--accent);
+        opacity: 1;
+      }
+
+      .checklist input:checked + span {
+        color: var(--muted);
+        text-decoration: line-through;
+        text-decoration-color: #aab6aa;
+      }
+
       footer {
         width: min(100% - 48px, 1000px);
         margin: 0 auto;
@@ -178,6 +259,9 @@
         .role { margin-top: 12px; font-size: 15px; }
         .intro { margin-top: 22px; font-size: 14px; }
         .contact { margin-top: 25px; }
+        .learning { padding: 34px 28px 42px; }
+        .learning-group { margin-top: 28px; }
+        .learning-group + .learning-group { padding-top: 26px; }
         footer { width: min(100% - 36px, 1000px); }
       }
 
@@ -197,8 +281,8 @@
         <div class="intro-copy">
           <p class="eyebrow">About me</p>
           <h1 id="name">赵庆</h1>
-          <p class="role">硕士研究生<br>云南大学</p>
-          <p class="intro">你好，欢迎来到我的个人主页。</p>
+          <p class="role">云南大学 · 人工智能专业<br>硕士研究生</p>
+          <p class="intro">计划学习计算机视觉与大模型相关技术，在这里记录学习进度。</p>
           <a class="contact" href="mailto:2992110786@qq.com" aria-label="发送邮件至 2992110786@qq.com">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 6.75h16v10.5H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -209,6 +293,55 @@
         </div>
         <div class="portrait-wrap">
           <img class="portrait" src="portrait.jpg" alt="赵庆证件照" width="960" height="1338">
+        </div>
+      </section>
+
+      <section class="learning" aria-labelledby="learning-title">
+        <p class="eyebrow">Learning plan</p>
+        <h2 id="learning-title">学习清单</h2>
+        <p class="learning-note">先学习基础，再分别推进计算机视觉和大模型方向。未勾选代表尚未学会。</p>
+
+        <!-- 完成某项后，在对应的 input 中加入 checked，例如：<input type="checkbox" checked disabled> -->
+        <div class="learning-group">
+          <h3>基础</h3>
+          <ol class="checklist">
+            <li><label><input type="checkbox" disabled><span>Python 基础</span></label></li>
+            <li><label><input type="checkbox" disabled><span>数学、机器学习与深度学习基础</span></label></li>
+            <li><label><input type="checkbox" disabled><span>PyTorch：张量、自动求导与训练流程</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>计算机视觉方向</h3>
+          <ol class="checklist">
+            <li><label><input type="checkbox" disabled><span>图像处理与卷积神经网络（CNN）</span></label></li>
+            <li><label><input type="checkbox" disabled><span>图像分类、目标检测与图像分割</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>大模型方向 · 推荐顺序</h3>
+          <ol class="checklist">
+            <li><label><input type="checkbox" disabled><span>Transformer 与 Tokenizer</span></label></li>
+            <li><label><input type="checkbox" disabled><span>大模型调用与推理</span></label></li>
+            <li><label><input type="checkbox" disabled><span>提示词工程</span></label></li>
+            <li><label><input type="checkbox" disabled><span>RAG：检索增强生成</span></label></li>
+            <li><label><input type="checkbox" disabled><span>LangChain</span></label></li>
+            <li><label><input type="checkbox" disabled><span>Agent 基础</span></label></li>
+            <li><label><input type="checkbox" disabled><span>LangGraph</span></label></li>
+            <li><label><input type="checkbox" disabled><span>多 Agent 系统</span></label></li>
+            <li><label><input type="checkbox" disabled><span>模型微调（LoRA 等）</span></label></li>
+            <li><label><input type="checkbox" disabled><span>模型量化</span></label></li>
+            <li><label><input type="checkbox" disabled><span>私有化部署</span></label></li>
+            <li><label><input type="checkbox" disabled><span>多模态模型</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>其他目标</h3>
+          <ol class="checklist">
+            <li><label><input type="checkbox" disabled><span>英语六级（待通过）</span></label></li>
+          </ol>
         </div>
       </section>
     </main>
