@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f7f7f5">
-    <meta name="description" content="赵庆，云南大学人工智能专业硕士研究生。记录计算机视觉与大模型学习计划。">
+    <meta name="description" content="赵庆，云南大学人工智能专业硕士研究生。记录大模型应用与 AI Agent 开发学习进度。">
     <title>赵庆 · 个人主页</title>
     <style>
       :root {
@@ -197,6 +197,13 @@
         font-weight: 650;
       }
 
+      .group-note {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
       .checklist {
         margin: 0;
         padding-left: 1.7em;
@@ -282,7 +289,7 @@
           <p class="eyebrow">About me</p>
           <h1 id="name">赵庆</h1>
           <p class="role">云南大学 · 人工智能专业<br>硕士研究生</p>
-          <p class="intro">计划学习计算机视觉与大模型相关技术，在这里记录学习进度。</p>
+          <p class="intro">计划学习大模型应用与 AI Agent 开发，在这里记录学习进度。</p>
           <a class="contact" href="mailto:2992110786@qq.com" aria-label="发送邮件至 2992110786@qq.com">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 6.75h16v10.5H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -298,49 +305,90 @@
 
       <section class="learning" aria-labelledby="learning-title">
         <p class="eyebrow">Learning plan</p>
-        <h2 id="learning-title">学习清单</h2>
-        <p class="learning-note">先学习基础，再分别推进计算机视觉和大模型方向。未勾选代表尚未学会。</p>
+        <h2 id="learning-title">AI Agent 学习清单</h2>
+        <p class="learning-note">根据 AI Agent 开发岗位要求整理，按阶段推进。未勾选的项目代表待完成。</p>
 
         <!-- 完成某项后，在对应的 input 中加入 checked，例如：<input type="checkbox" checked disabled> -->
         <div class="learning-group">
-          <h3>基础</h3>
+          <h3>01 · 工程基础</h3>
+          <p class="group-note">目标：能独立编写、运行和管理 Python 项目。</p>
           <ol class="checklist">
-            <li><label><input type="checkbox" checked disabled><span>Python 基础</span></label></li>
-            <li><label><input type="checkbox" disabled><span>数学、机器学习与深度学习基础</span></label></li>
-            <li><label><input type="checkbox" checked disabled><span>PyTorch：张量、自动求导与训练流程</span></label></li>
+            <li><label><input id="learn-python" type="checkbox" checked disabled><span>Python 基础：函数、类、模块、异常处理与数据结构</span></label></li>
+            <li><label><input id="learn-git" type="checkbox" disabled><span>Git：提交、分支、合并、拉取与推送</span></label></li>
+            <li><label><input id="learn-shell" type="checkbox" disabled><span>Terminal / Shell：常用命令、文件操作与脚本运行</span></label></li>
+            <li><label><input id="learn-development-environment" type="checkbox" disabled><span>Linux / macOS / Windows：开发环境配置与基础调试</span></label></li>
           </ol>
         </div>
 
         <div class="learning-group">
-          <h3>计算机视觉方向</h3>
+          <h3>02 · 大模型应用基础</h3>
+          <p class="group-note">目标：完成一个能调用大模型和工具的 Python 程序。</p>
           <ol class="checklist">
-            <li><label><input type="checkbox" disabled><span>图像处理与卷积神经网络（CNN）</span></label></li>
-            <li><label><input type="checkbox" disabled><span>图像分类、目标检测与图像分割</span></label></li>
+            <li><label><input id="learn-llm-concepts" type="checkbox" disabled><span>LLM、Prompt、Context：模型、提示词与上下文的基本概念</span></label></li>
+            <li><label><input id="learn-llm-api" type="checkbox" disabled><span>大模型 API：请求、响应处理与应用开发</span></label></li>
+            <li><label><input id="learn-prompt" type="checkbox" disabled><span>提示词工程：任务描述、示例与上下文组织</span></label></li>
+            <li><label><input id="learn-tool-calling" type="checkbox" disabled><span>Function Calling / Tool Calling：工具调用与结果回传</span></label></li>
           </ol>
         </div>
 
         <div class="learning-group">
-          <h3>大模型方向 · 推荐顺序</h3>
+          <h3>03 · RAG 检索增强</h3>
+          <p class="group-note">目标：把文档处理、检索和回答串成一个知识库问答流程。</p>
           <ol class="checklist">
-            <li><label><input type="checkbox" disabled><span>Transformer 与 Tokenizer</span></label></li>
-            <li><label><input type="checkbox" disabled><span>大模型调用与推理</span></label></li>
-            <li><label><input type="checkbox" disabled><span>提示词工程</span></label></li>
-            <li><label><input type="checkbox" disabled><span>RAG：检索增强生成</span></label></li>
-            <li><label><input type="checkbox" disabled><span>LangChain</span></label></li>
-            <li><label><input type="checkbox" disabled><span>Agent 基础</span></label></li>
-            <li><label><input type="checkbox" disabled><span>LangGraph</span></label></li>
-            <li><label><input type="checkbox" disabled><span>多 Agent 系统</span></label></li>
-            <li><label><input type="checkbox" disabled><span>模型微调（LoRA 等）</span></label></li>
-            <li><label><input type="checkbox" disabled><span>模型量化</span></label></li>
-            <li><label><input type="checkbox" disabled><span>私有化部署</span></label></li>
-            <li><label><input type="checkbox" disabled><span>多模态模型</span></label></li>
+            <li><label><input id="learn-document-chunking" type="checkbox" disabled><span>文档处理与切分：把原始内容整理为可检索片段</span></label></li>
+            <li><label><input id="learn-embedding" type="checkbox" disabled><span>Embedding：文本向量化</span></label></li>
+            <li><label><input id="learn-vector-search" type="checkbox" disabled><span>向量检索与 Top-K：选出相关片段</span></label></li>
+            <li><label><input id="learn-rerank" type="checkbox" disabled><span>Rerank：对检索结果重新排序</span></label></li>
+            <li><label><input id="learn-rag-project" type="checkbox" disabled><span>RAG 实践：检索内容、组织上下文并生成回答</span></label></li>
           </ol>
         </div>
 
         <div class="learning-group">
-          <h3>其他目标</h3>
+          <h3>04 · Agent 核心能力</h3>
+          <p class="group-note">目标：理解 Agent 的执行过程，并让它使用工具和记忆完成任务。</p>
           <ol class="checklist">
-            <li><label><input type="checkbox" disabled><span>英语六级（待通过）</span></label></li>
+            <li><label><input id="learn-agent-workflow" type="checkbox" disabled><span>Agent / Workflow：任务执行与工作流的基本概念</span></label></li>
+            <li><label><input id="learn-tools-skills" type="checkbox" disabled><span>Tools / Skills：编写与组织可复用工具和技能</span></label></li>
+            <li><label><input id="learn-mcp" type="checkbox" disabled><span>MCP：连接外部工具与服务</span></label></li>
+            <li><label><input id="learn-agent-runtime" type="checkbox" disabled><span>Agent Runtime：运行过程与任务状态管理</span></label></li>
+            <li><label><input id="learn-agent-memory" type="checkbox" disabled><span>Agent Memory：记忆保存、读取与上下文组织</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>05 · 框架与多 Agent</h3>
+          <p class="group-note">先学习 LangChain 和 LangGraph；AutoGen、CrewAI 可先选一个完成实验。</p>
+          <ol class="checklist">
+            <li><label><input id="learn-langchain" type="checkbox" disabled><span>LangChain：使用框架完成大模型与工具调用</span></label></li>
+            <li><label><input id="learn-langgraph" type="checkbox" disabled><span>LangGraph：编排 Agent 工作流</span></label></li>
+            <li><label><input id="learn-multi-agent-framework" type="checkbox" disabled><span>AutoGen / CrewAI：至少选一个完成多 Agent 实验</span></label></li>
+            <li><label><input id="learn-multi-agent" type="checkbox" disabled><span>Multi-Agent：角色分工、通信与协作</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>06 · 本地能力与系统集成</h3>
+          <p class="group-note">目标：让 Agent 操作本地环境，并与实际工作中的系统连接。</p>
+          <ol class="checklist">
+            <li><label><input id="learn-local-agent" type="checkbox" disabled><span>本地 Agent：文件操作、Terminal / Shell 与 Git 工具集成</span></label></li>
+            <li><label><input id="learn-background-tasks" type="checkbox" disabled><span>后台任务：任务启动、进度跟踪与结果处理</span></label></li>
+            <li><label><input id="learn-browser-use" type="checkbox" disabled><span>Browser Use：浏览器操作实践</span></label></li>
+            <li><label><input id="learn-computer-use" type="checkbox" disabled><span>Computer Use：桌面操作实践</span></label></li>
+            <li><label><input id="learn-system-integration" type="checkbox" disabled><span>系统集成：Git、Jira、飞书、企业微信等系统的连接实践</span></label></li>
+          </ol>
+        </div>
+
+        <div class="learning-group">
+          <h3>07 · 开源项目与工程实践</h3>
+          <p class="group-note">目标：运行并理解开源项目，完成一个能展示、能调试的 Agent 项目。</p>
+          <ol class="checklist">
+            <li><label><input id="learn-source-reading" type="checkbox" disabled><span>源码与文档阅读：结合 GitHub Issues 定位问题</span></label></li>
+            <li><label><input id="learn-hermes-agent" type="checkbox" disabled><span>Hermes Agent：运行项目并研究实现</span></label></li>
+            <li><label><input id="learn-openclaw" type="checkbox" disabled><span>OpenClaw：运行项目并研究实现</span></label></li>
+            <li><label><input id="learn-project-extension" type="checkbox" disabled><span>二次开发与版本适配：完成一次功能修改或迭代</span></label></li>
+            <li><label><input id="learn-agent-debug" type="checkbox" disabled><span>Agent 功能测试与 Debug：通过日志和实验定位问题</span></label></li>
+            <li><label><input id="learn-performance-compatibility" type="checkbox" disabled><span>性能优化与 Windows / macOS / Linux 兼容性处理</span></label></li>
+            <li><label><input id="learn-ai-coding" type="checkbox" disabled><span>AI Coding：跟踪新技术与开源项目，完成技术验证</span></label></li>
           </ol>
         </div>
       </section>
