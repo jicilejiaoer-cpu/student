@@ -1,6 +1,6 @@
 # 赵庆 · 个人主页
 
-简洁的 GitHub Pages 个人简介页面。页面内容在 `index.html`，头像在 `portrait.jpg`。
+简洁的 GitHub Pages 个人简介页面。页面内容在 `index.html`，头像在 `avatar.jpg`。
 
 个人主页：<https://jicilejiaoer-cpu.github.io/student/>
 
